@@ -1,8 +1,8 @@
 import pandas as pd
 import numpy as np
 import streamlit as st
-#import matplotlib.pyplot as plt
-#import seaborn as sns
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 #
 st.set_page_config(layout = 'centered',page_title='Talento Tech', page_icon='::smaile')
@@ -37,7 +37,7 @@ with Steps[0]:
     m2.metric(label = 'Metrica 2',value = np.mean(id1['Conversiones']),
     delta=str(np.mean(id1['Rebotes']))+ 'Promedios', 
     delta_color='inverse')
-"""
+
 with Steps[1]:
     df=pd.read_csv("https://raw.githubusercontent.com/diplomado-bigdata-machinelearning-udea/Curso1/master/s03/dataVentas2009.csv")
     df.Fecha = pd.to_datetime(df.Fecha, format ='%d/%m/%Y')
@@ -48,7 +48,6 @@ with Steps[1]:
     ax =sns.histplot(data=df, x=varx)
     st.pyplot(fig)
 
-"""
 
 
 
